@@ -64,6 +64,38 @@ The numerical solution is compared with the analytical solution.
 
 The project includes:
 - FTCS coarse-grid numerical values.
+- 
+## 10. Convergence Analysis
+
+A convergence study was performed using four different spatial grid sizes: 8, 16, 32, and 64 nodes.
+
+The maximum absolute error was calculated by comparing the natural cubic spline reconstruction with the analytical solution.
+
+### Numerical Results
+
+| Grid Size (Nx) | Grid Spacing (dx) | Maximum Absolute Error |
+|---|---|---|
+| 8 | 0.142857 | 2.18103001e-03 |
+| 16 | 0.066667 | 7.05913489e-04 |
+| 32 | 0.032258 | 1.76522390e-04 |
+| 64 | 0.015873 | 4.37934021e-05 |
+
+### Observed Convergence Rate
+
+The experimentally observed convergence rate was:
+
+**p = 1.7897**
+
+The results demonstrate that the maximum absolute error decreases as the spatial grid is refined.
+
+The observed convergence rate is close to second order, indicating approximately second-order convergence over the tested grids.
+
+### Conclusion
+
+The numerical experiment demonstrates the effectiveness of combining the FTCS finite difference method with natural cubic spline reconstruction for approximating the one-dimensional heat equation.
+
+Further investigation may examine the individual contributions of finite difference discretization and spline interpolation to the overall approximation error.
+
 - Natural cubic spline reconstruction.
 - Analytical solution.
 - Pointwise absolute error plot.
